@@ -1,0 +1,16 @@
+.botao{
+    padding: 15px;
+    display: inline-block;
+    background-image: linear-gradient(lightblue,blue);
+    cursor: pointer;
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.bordas {
+    border: 1px solid red;
+    padding: 5px;
+}

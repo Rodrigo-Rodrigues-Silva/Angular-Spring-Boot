@@ -1,0 +1,33 @@
+<div style="padding-bottom: 15px; font-size: 25px; font-weight: bold;">
+    Lista de usuarios
+</div>
+<div>
+    <table class="classname">
+        <thead>
+            <tr style="font-size: 18px; font-weight: bold;">
+                <td class="bordas">Nome</td>
+                <td class="bordas">Sexo</td>
+                <td class="bordas">Data de Nascimento</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of usuarios">
+                <td class="bordas">{{user.nome}}</td>
+                <td class="bordas">{{user.sexo}}</td>
+                <td class="bordas">{{user.nascimento}}</td>
+                <td class="bordas">
+                    <div (click)="deletar(user.id)" class="botao">
+                        Delete
+                    </div>
+
+                   
+                </td>
+                <td class="bordas">
+                    <div [routerLink]="['cadastro',user.id]" class="botao">
+                        Alterar
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

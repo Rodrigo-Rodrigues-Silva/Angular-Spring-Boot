@@ -1,0 +1,61 @@
+<table>
+    <tr>
+        <td colspan="2">
+            Criar Usuario
+        </td>
+        
+    </tr>
+    <tr>
+        <td>
+            <label>Nome</label>
+        </td>
+        <td>
+            <input type="text" #nome>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Sexo</label>
+        </td>
+        <td>
+            <input type="text" #sexo>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Data de Nascimento</label>
+        </td>
+        <td>
+            <input type="text" #nascimento>
+        </td>
+    </tr>
+    <tr *ngFor="let email of lista"> 
+        <td>Email: </td>
+        <td><input type="text" class="email" value=""></td>
+    </tr>
+    <tr>
+        <td>
+            <div (click)="salvar()" class="botao">
+                Salvar
+            </div>
+        </td>
+        <td>
+            <div (click)="novoEmail()" class="botao">
+                Outro Email
+            </div>
+        </td>
+    </tr>
+</table>
+<input type="hidden" #id>
+
+{{mensagem}}
+
+
+<div (click)="imprimirVarios()" class="botao">
+    testar
+</div>
+
+<div *ngFor="let palavra of respostas"> 
+  {{ palavra }}
+</div>
+
